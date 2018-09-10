@@ -18,13 +18,50 @@
 \item Stellen Sie alle physikalischen Übertragungsmedien, die im Text erwähnt werden, strukturiert mit einer Mind-Map dar.
 \end{enumerate}
 
+\begin{tikzpicture}
+\path[mindmap, grow cyclic, every node/.style=concept, concept color=orange!40, 
+    level 1/.append style={level distance=5.7cm,sibling angle=270},
+    level 2/.append style={level distance=3cm,sibling angle=90},]
+	node[concept] {Physikalische Übertragungsmedien}
+	[clockwise from=0]	
+	child[concept color=green!50!black] {
+      	node[concept] {Leitergebunden}
+      	[clockwise from=45]
+      	child { node[concept] {metallische} 
+      		[clockwise from=170]
+      		child{ node[concept] {Twisted-Pair}
+      			[clockwise from=180]
+      			child{ node[concept] {SDP}}
+      			child{ node[concept] {UDP}}
+      			}
+      		child{ node[concept] {Koaxialkabel}}
+      	}
+      	child { node[concept] {unmetallische} 
+			[clockwise from=225]
+			child { node[concept] {Lichtwellenleiter (LWL)}}      	
+      	}
+    }
+    child[concept color=red] {
+		node[concept] {Leiterungebunden}
+      		[clockwise from=180]
+      		child { node[concept] {Funk}
+      			[clockwise from=110]
+      			child { node[concept] {802.11 (WLAN)}}
+      			child { node[concept] {802.151 (Bluetooth)}}
+      			child { node[concept] {RFID}}
+      		}
+      		child { node[concept] {Infrarot}}
+      		child { node[concept] {Schall}}
+    };
+\end{tikzpicture}\\
+
 \noindent\resizebox{1\textwidth}{!}{%
     \begin{tikzpicture}
 \path[mindmap, grow cyclic, every node/.style=concept, concept color=orange!40, 
     level 1/.append style={level distance=5.7cm,sibling angle=90},
     level 2/.append style={level distance=3cm,sibling angle=90},]
 	node[concept] {Physikalische Übertragungsmedien}
-	[clockwise from=0]
+	[clockwise from=0]	
 	child[concept color=green!50!black] {
       node[concept] {10Base5}
       [clockwise from=45]
