@@ -1,0 +1,47 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\usepackage{tikz}
+\usetikzlibrary{mindmap,trees}
+
+\author{Daniel Thümen}
+\title{Ethernetstandard des IEEE}
+\begin{document}
+\section*{Aufgaben zum Aufgabenblatt}
+\begin{enumerate}
+\item Stellen Sie alle physikalischen Übertragungsmedien, die im Text erwähnt werden, strukturiert mit einer Mind-Map dar.
+\end{enumerate}
+\begin{tikzpicture}
+\path[mindmap, grow cyclic, every node/.style=concept, concept color=orange!40, 
+    level 1/.append style={level distance=5.7cm,sibling angle=90},
+    level 2/.append style={level distance=3cm,sibling angle=90},]
+	node[concept] {Physikalische Übertragungsmedien}
+	[clockwise from=0]
+	child[concept color=green!50!black] {
+      node[concept] {10Base5}
+      [clockwise from=90]
+      child { node[concept] {MRAM} }
+    }
+    child[concept color=red] {
+      node[concept] {1Base5 StarLAN}
+      [clockwise from=-120]
+      child { node[concept] {NVSRAM} }
+    }
+    child[concept color=yellow] {
+      node[concept] {10Base-T}
+      [clockwise from=-120]
+      child { node[concept] {NVSRAM} }
+    }
+    child[concept color=orange] {
+      node[concept] {10Base-F}
+      [clockwise from=-120]
+      child { node[concept] {NVSRAM} }
+    };
+\end{tikzpicture}
+\end{document}
