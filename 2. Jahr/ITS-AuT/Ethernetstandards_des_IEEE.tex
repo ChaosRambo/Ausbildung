@@ -17,7 +17,9 @@
 \begin{enumerate}
 \item Stellen Sie alle physikalischen Übertragungsmedien, die im Text erwähnt werden, strukturiert mit einer Mind-Map dar.
 \end{enumerate}
-\begin{tikzpicture}
+
+\noindent\resizebox{1\textwidth}{!}{%
+    \begin{tikzpicture}
 \path[mindmap, grow cyclic, every node/.style=concept, concept color=orange!40, 
     level 1/.append style={level distance=5.7cm,sibling angle=90},
     level 2/.append style={level distance=3cm,sibling angle=90},]
@@ -25,23 +27,36 @@
 	[clockwise from=0]
 	child[concept color=green!50!black] {
       node[concept] {10Base5}
-      [clockwise from=90]
-      child { node[concept] {MRAM} }
+      [clockwise from=45]
+      child { node[concept] {Seperater Datenbus} }
+      child { node[concept] {10Mbit Übertragung}}
+      child { node[concept] {Hohe Installationskosten}}
+      child { node[concept] {Kollisionsdomäne (CSMA/CD)}}
+      child { node[concept] {CSMA/CD wirkt Leistungshemmend}}
     }
     child[concept color=red] {
       node[concept] {1Base5 StarLAN}
       [clockwise from=-120]
-      child { node[concept] {NVSRAM} }
+      child { node[concept] {Geringe Installationskosten} }
+      child { node[concept] {1Mbit Datenübertragung}}
+      child { node[concept] {Kollisionsdomäne (CSMA/CD)}}
+      child { node[concept] {Geringe Abschirmung}}
     }
     child[concept color=yellow] {
       node[concept] {10Base-T}
       [clockwise from=-120]
-      child { node[concept] {NVSRAM} }
+      child { node[concept] {Eine Leitung für Senden und Empfangen} }
+      child { node[concept] {Bridges und Switches}}
+      child { node[concept] {Kollisionsverfahren}}
+      child { node[concept] {10Mbit Übertragung}}
     }
     child[concept color=orange] {
       node[concept] {10Base-F}
-      [clockwise from=-120]
-      child { node[concept] {NVSRAM} }
+      [clockwise from=180]
+      child { node[concept] {Keine Interverenzen} }
+      child { node[concept] {Segmentlänge bis zu 2km} }
+      child { node[concept] {Hohe Installationskosten} }
     };
 \end{tikzpicture}
+}
 \end{document}
