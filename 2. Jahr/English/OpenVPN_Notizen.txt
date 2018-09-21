@@ -1,0 +1,13 @@
+General:
+-initial release 13.03.17 by James Yonan
+-open source / freeware
+-used to establish a virutal private network between client and server (point to point)
+-device independant
+-prevents internet traffic block through ISP
+-increased security
+
+Encryption/Decryption/Authentification/Security:
+-OpenSSL encryption (first release: 23.12.1998)
+-works with UDP and TCP
+-authentification via pre-shared keys, passwords or certificates
+-256 Bit Encryption
